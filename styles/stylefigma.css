@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #5a1a1a;
+    /* gris foncé moins intense */
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b0f0f;
+    /* gris foncé */
+    padding: 0 20px;
+    height: 70px;
+    padding: 10px;
+}
+
+/* Titre du header */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    color: #3b0f0f;
+}
+
+div {
+    text-align: justify;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu button {
+    background-color: #444;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #666;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #badd5a;
+    border-radius: 10px;
+    top: 100%;
+    left: 0;
+    min-width: 120px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.espacement {
+    color: #5a1a1a;
+    margin-top: 75px;
+}
+
+.white-box {
+    background-color: #fff8e1;
+    color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #fff8e1;
+}
+
+.white-box2 {
+    background-color: #fff8e1;
+    color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #fff8e1;
+    margin-top: 20px;
+}
+
+h1,
+h2 {
+    color: #fff8e1;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.title a {
+    text-decoration: none;
+    color: #fff8e1;
+}
+
+.white-box h2 {
+    color: #5a1a1a;
+}
+
+.image1 {
+    height: 250px;
+    width: auto;
+    border: 2px solid #fff8e1;
+    gap: 25px;
+    margin: 20px;
+}
+
+.title a {
+    text-decoration: none;
+    color: #fff8e1;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+/* Miniature */
+.thumbnail img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+/* Cacher la checkbox */
+.popup-toggle {
+    display: none;
+}
+
+/* Popup masqué par défaut */
+.popup {
+    display: none;
+}
+
+.popup-toggle:checked+.thumbnail+.popup {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+/* Fond de la lightbox cliquable */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Image agrandie centrée */
+.popup-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.popup-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flex-pair {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons a {
+        width: 80%;
+        text-align: center;
+    }
+
+    img.profile {
+        width: 100px;
+        height: 100px;
+    }
+}
